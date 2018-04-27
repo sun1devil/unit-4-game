@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" script type="text/Javascript">
+    // Javascript here //
+// <!--Declare variables  -->
+    var numberArray = [19,20,21,22,23,24,25,26,27,28];
+    console.log(numberArray)
+    var crystalArray = [1,2,3,4,5,6,7,8,9,10,11,12];
+    var winCount = 0;
+    var lossCount= 0;
+    var crystalValue = ["crystalone", "crystaltwo", "crystalthree", "crystalfour"];
+    var crystalValue1 = 3;
+    var crystalValue2 = 5;
+    var crystalValue3 = 12;
+    var crystalValue4 = 10;
+    var crystalNumber = crystalArray[Math.floor(Math.random()* crystalArray.length)];                           
+    var randomNumber = numberArray[Math.floor(random() * numberArray.length)];
+    console.log(randomNumber);
+    // var currentTotal = function(randomNumber);
+        console.log(randomNumber);
+    
+    
+// <!-- Functions -->
+    function resetGame(){
+        var randomNumber = numberArray[Math.floor(random() * numberArray.length)];
+        console.log(randomNumber);
+        
+    }
+    function resetCrystalValue() {
+        var crystalNumber = crystalArray[Math.floor(Math.random()* crystalArray.length)];
+        console.log(crystalNumber)
+    }
+
+    for (var i; i< crystalValue.length; i++) {
+
+    }
+// <!-- jquery -->
+</script>
+    <body>
+</head>
+<header id="crystalheader">
+    <Div class="container">
+<!-- add header content here use bootstrap grid one lardge column -->
+        <h1>Crystal Collector</h1>
+</header>
+</div>
+<div class="container" id="instructions">
+    <!-- paragraph below with instructions use grid -->
+    <h1>Instructions:<h1>
+        <p>Enter the game instructions here</p>
+</Div>
+<div class="container" id="cards">
+    <!--Clickable images use boootstrap grid/cards/js logic  -->
+
+</div>
+<div class="container" id="results">
+    <!-- display random #(disapper), current number, wins and losses
+        Bootstrap Grid four columns
+    <! Logic:
+        create random (19-120)number display and remove
+        assign values to crystal buttons (1-12)
+        if click add value to random #
+        update number
+        if value < random click again, message
+        if value match random: +Win Count, Message, reset game
+        if value > random +Loss count, message, reset game 
+    -->
+
+</div>
+<div class="container" id="message">
+/          <!-- Display message use bootstrap grid one large column?
+    "Try and match the magic number!"
+    "Collect another Crystal!"
+    "You Win!!!"
+    "You Lose! Tray again" -->
+    <h1>You Lose! try again!</h1>
+</div>
+
+
+<footer class="container" id=footer>
+    <!-- Footer use grid, 1 large column -->
+    <h2>this is the footer</h2>
+    </footer>
+
+</body>
+
+</html>
