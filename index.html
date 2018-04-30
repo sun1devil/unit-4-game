@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" script type="text/Javascript">
     // Javascript here //
 // <!--Declare variables  -->
@@ -41,56 +42,109 @@
     }
 
     for (var i; i< crystalValue.length; i++) {
-
+        function crystalNumber()
+        console.log(crystalNumber)
     }
-// <!-- jquery -->
+
+//     // logic //
+//     // 
+//     listen for key
+//     on key create start value
+//     create crystal value
+//     display for x time and disappear
+//     display message to click crystal
+//     listen for which crystal click
+//     if crystal clicked, sum crystal value and start
+//     if < secret, display guess again
+//     if match secret, display winner, adjust winCount, reset.
+//     if > secret, display loser, adjust lossCount
+    
+// // <!-- jquery -->
 </script>
     <body>
 </head>
 <header id="crystalheader">
     <Div class="container">
 <!-- add header content here use bootstrap grid one lardge column -->
-        <h1>Crystal Collector</h1>
+        <div class="row" div class="col-md-12">             
+            <p>Crystal Collector Game</p>
+        </div>
 </header>
-</div>
-<div class="container" id="instructions">
+        <Section class="container" id="insructions">
     <!-- paragraph below with instructions use grid -->
-    <h1>Instructions:<h1>
-        <p>Enter the game instructions here</p>
-</Div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>&nbsp;</p>
+            </div>
+                <div class="col-md-4">
+                    <li Instructions:>
+                                Try and match the secret crystal value!
+                                Start with a Random value
+                                Click a Crystal to add value (each crystal has a different value
+                                If you match the secret value, YOU WIN!
+                                If you go over the secret value, YOU LOSE!                                       
+                    </li>
+                </div>
+                    <div class="col-md-4">
+                    <p>&nbsp;</p>
+                </div>
+            </div>       
+        </Section>    
 <div class="container" id="cards">
     <!--Clickable images use boootstrap grid/cards/js logic  -->
+    <div class="row">
+        <div class="col-md-3" id="Crystal1">
+            <img src="assets/images/Crystal1.jpg" alt="Crystal1">
+                <button class="btn">Button</button>
+        </div>
+        <div class="col-md-3" id="Crystal2">
+            <img src="assets/images/Crystal2.jpg" alt="Crystal2">
+                <button class="btn">Button</button> 
+        </div>
+        <div class="col-md-3" id="Crystal3">
+            <img src="assets/images/crystal3.jpg" alt="Crystal3">
+                <button class="btn">Button</button>
+        </div>
+        <div class="col-md-3" id="Crystal4">
+            <img src="assets/images/Crystal4.jpg" alt="Crystal4">
+                <button class="btn">Button</button>
+        </div>
+</div>
 
+<div class="container" id="message">
+<!-- Display message use bootstrap grid one large column? -->
+     <!-- <h2>"Try and match the magic number!"</h2> -->
+    <!-- "Collect another Crystal!"
+    "Good Guess, but not a match!"
+    "Over Valuation! You Lose!"
+    "Winner!!! Perfect Match! You are a Genius"    
+    -->
+    <div class="row" div class="col-md-12"> 
+        <h1>Perfect Match! You are a Genius</h1>
+    
+    </div>
 </div>
 <div class="container" id="results">
-    <!-- display random #(disapper), current number, wins and losses
-        Bootstrap Grid four columns
-    <! Logic:
-        create random (19-120)number display and remove
-        assign values to crystal buttons (1-12)
-        if click add value to random #
-        update number
-        if value < random click again, message
-        if value match random: +Win Count, Message, reset game
-        if value > random +Loss count, message, reset game 
-    -->
-
-</div>
-<div class="container" id="message">
-/          <!-- Display message use bootstrap grid one large column?
-    "Try and match the magic number!"
-    "Collect another Crystal!"
-    "You Win!!!"
-    "You Lose! Tray again" -->
-    <h1>You Lose! try again!</h1>
-</div>
-
-
-<footer class="container" id=footer>
+    <div class="row">
+        <div class="col-md-3">
+            <p"Random Number" id="start-number"></p>
+        </div>
+        <div class="col-md-3">
+                <p"Current Value" id="current-number"></p> 
+                </div>
+                <div class="col-md-3">
+                    <p"Wins:" id="winCount"></p>
+                </div>
+                <div class="col-md-3">
+                    <p"Losses:" id="lossCount"></p>
+                </div>
+        </div>
     <!-- Footer use grid, 1 large column -->
-    <h2>this is the footer</h2>
-    </footer>
-
 </body>
-
+<footer id="crystalheader" Div class="container">
+    <!-- add header content here use bootstrap grid one lardge column -->
+            <div class="row" div class="col-md-12">             
+                <p>Footer</p>
+            </div>
+</footer>
 </html>
