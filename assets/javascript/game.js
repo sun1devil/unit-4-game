@@ -12,6 +12,12 @@ var crystal2 = Math.floor(Math.random() * crystalArray.length);
 var crystal3 = Math.floor(Math.random() * crystalArray.length);
 var crystal4 = Math.floor(Math.random() * crystalArray.length);
 // functions //
+$('#begin').on('click', function () {
+    currentValue + randomNumber;
+    console.log("Random Value=" + randomNumber);
+    $('#Start').html('Random Value:' + "" + randomNumber);
+})
+
 $('#Crystal1').on('click', function () {
         currentValue = randomNumber + crystal1;
         console.log("New Value=" + currentValue);
@@ -45,29 +51,26 @@ $('#Crystal1').on('click', function () {
                 // for (vari =0; i< 12; i++){
                 //     console.log(crystal1, crystal2, crystal3, crystal4);
                 //     crystalArray.push(crystal1, crystal2, crystal3, crystal4);
-
+     
                 // If Statements //
 
                 if (currentValue == randomNumber) {
-                    $('#message').text('Winner! Perfect Match! You are a Genius!');
+                    $('#message').html('Winner! Perfect Match! You are a Genius!');
                     winCount++;
-                    $('#Wins').text('Losses:' + '' + winCount);
+                    $('#Wins').html('Losses:' + '' + winCount);
                     console.log(wins)
                     // Resetgame //
                 } else if (currentValue > randomNumber) {
-                    $('#message').text('Over Valuation! You Lose!');
+                    $('#message').html('Over Valuation! You Lose!');
                     lossCount++;
-                    $('#losses').text('Losses:' + '' + lossCount);
+                    $('#losses').html('Losses:' + '' + lossCount);
                     console.log(lossCount)
                     // Resetgame //
                 } else {
                     $('#message').text('Good Guess, but not a match! Chose another Crystal');
                 }
 
-    //   $('#crystals').empty();
-    //   newCrystals();
-    //   newGame();
-
+    //   reset //
 
 
 
