@@ -39,8 +39,9 @@ function checkWin(){
 
 function displayStats(){
     $('#Wins').html('Wins: ' + winCount);
-    $('#losses').html('Losses: ' +  lossCount);
-    $('#Current').html('Current score: ' +currentValue);
+    $('#Losses').html('Losses: ' +  lossCount);
+    $('#Current').html('Current score: ' + currentValue);
+    $('#Start').html('Random Value:' + "" + randomNumber);
 }
 
 // functions //
@@ -48,7 +49,7 @@ $('#begin').on('click', function () {
     start()
     console.log("Target Value=" + randomNumber);
     console.log('Current Score:' + "" + currentValue);
-    $('#Start').html('Random Value:' + "" + randomNumber);
+    displayStats()
 })
 
 $('#Crystal1').on('click', function () {
@@ -91,20 +92,20 @@ $('#Crystal1').on('click', function () {
      
                 // If Statements //
 
-                if (currentValue === randomNumber) {
+                // if (currentValue === randomNumber) {
                     
-                    winCount++;
+                //     winCount++;
                     
-                    console.log(wins)
-                    // Resetgame //
-                } else if (currentValue > randomNumber) {
+                //     console.log(wins)
+                //     // Resetgame //
+                // } else if (currentValue > randomNumber) {
                    
                   
-                    console.log(lossCount)
-                    // Resetgame //
-                } else {
-                    $('#message').html('Good Guess, but not a match! Chose another Crystal');
-                }
+                //     console.log(lossCount)
+                //     // Resetgame //
+                // } else {
+                //     $('#message').html('Good Guess, but not a match! Chose another Crystal');
+                // }
 
     //   reset //
 
