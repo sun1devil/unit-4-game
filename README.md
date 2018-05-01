@@ -1,7 +1,5 @@
 # unit-4-game
-Crystal Collector
-# Bootstrap Portfolio
-BootStrap Portfolio Project
+Crystal Collector Project
 This project created a game that works as follows:
 There will be four crystals displayed as buttons on the page.
 
