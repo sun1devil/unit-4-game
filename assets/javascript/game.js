@@ -1,6 +1,7 @@
 
  //This is broken    //
 // Declare Variables //
+
 var numberArray = [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120];
 var crystalArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var winCount = 0;
@@ -11,33 +12,69 @@ var crystal1 = Math.floor(Math.random() * crystalArray.length);
 var crystal2 = Math.floor(Math.random() * crystalArray.length);
 var crystal3 = Math.floor(Math.random() * crystalArray.length);
 var crystal4 = Math.floor(Math.random() * crystalArray.length);
+
+function start(){
+   
+    currentValue = 0;
+    randomNumber = Math.floor(Math.random() * numberArray.length);
+    crystal1 = Math.floor(Math.random() * crystalArray.length);
+    crystal2 = Math.floor(Math.random() * crystalArray.length);
+    crystal3 = Math.floor(Math.random() * crystalArray.length);
+    crystal4 = Math.floor(Math.random() * crystalArray.length);
+}
+
+function checkWin(){
+    if(currentValue === randomNumber){
+        winCount++
+        start()
+        $('#message').html('Winner! Perfect Match! You are a Genius!');
+        displayStats()
+    }else if(currentValue > randomNumber){
+        lossCount++
+        start()
+        $('#message').html('Over Valuation! You Lose!');
+        displayStats()
+    }
+}
+
+function displayStats(){
+    $('#Wins').html('Wins: ' + winCount);
+    $('#losses').html('Losses: ' +  lossCount);
+    $('#Current').html('Current score: ' +currentValue);
+}
+
 // functions //
 $('#begin').on('click', function () {
-    currentValue + randomNumber;
-    console.log("Random Value=" + randomNumber);
+    start()
+    console.log("Target Value=" + randomNumber);
+    console.log('Current Score:' + "" + currentValue);
     $('#Start').html('Random Value:' + "" + randomNumber);
 })
 
 $('#Crystal1').on('click', function () {
-        currentValue = randomNumber + crystal1;
-        console.log("New Value=" + currentValue);
-        $('#Current').html('Current Value:' + "" + currentValue);
+        currentValue += crystal1;
+        console.log('Current Score:' + "" + currentValue);
+        displayStats()
+        checkWin();
     })
 
     $('#Crystal2').on('click', function () {
-        currentValue = randomNumber + crystal2;
-        console.log("New Value=" + currentValue);
-    $('#Current').html('Current Value:' + "" + currentValue);
+        currentValue += crystal2;
+        console.log('Current Score:' + "" + currentValue);
+        displayStats()
+        checkWin();
     })           
         $('#Crystal3').on('click', function () {
-            currentValue = randomNumber + crystal3;
-            console.log("New Value=" + currentValue);
-        $('#Current').html('Current Value:' + "" + currentValue);
+            currentValue += crystal3;
+            console.log('Current Score:' + "" + currentValue);
+            displayStats()
+            checkWin();
     })
         $('#Crystal4').on('click', function () {
-        currentValue = randomNumber + crystal4;
-        console.log("New Value=" + currentValue);
-        $('#Current').html('Current Value:' + "" + currentValue);
+            currentValue += crystal4;
+            console.log('Current Score:' + "" + currentValue);
+             displayStats()
+            checkWin();
     })
                 // Create function for reset game //
                 // add timeout method to randomNumber // 
@@ -54,20 +91,19 @@ $('#Crystal1').on('click', function () {
      
                 // If Statements //
 
-                if (currentValue == randomNumber) {
-                    $('#message').html('Winner! Perfect Match! You are a Genius!');
+                if (currentValue === randomNumber) {
+                    
                     winCount++;
-                    $('#Wins').html('Losses:' + '' + winCount);
+                    
                     console.log(wins)
                     // Resetgame //
                 } else if (currentValue > randomNumber) {
-                    $('#message').html('Over Valuation! You Lose!');
-                    lossCount++;
-                    $('#losses').html('Losses:' + '' + lossCount);
+                   
+                  
                     console.log(lossCount)
                     // Resetgame //
                 } else {
-                    $('#message').text('Good Guess, but not a match! Chose another Crystal');
+                    $('#message').html('Good Guess, but not a match! Chose another Crystal');
                 }
 
     //   reset //
