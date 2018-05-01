@@ -6,35 +6,35 @@ var crystalArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var winCount = 0;
 var lossCount = 0;
 var currentValue = 0;
-var randomNumber = numberArray[Math.floor(random() * numberArray.length)];
-var crystal1 = crystalArray[Math.floor(random() * crystalArray.length)];
-var crystal2 = crystalArray[Math.floor(random() * crystalArray.length)];
-var crystal3 = crystalArray[Math.floor(random() * crystalArray.length)];
-var crystal4 = crystalArray[Math.floor(random() * crystalArray.length)];
+var randomNumber = Math.floor(Math.random() * numberArray.length);
+var crystal1 = Math.floor(Math.random() * crystalArray.length);
+var crystal2 = Math.floor(Math.random() * crystalArray.length);
+var crystal3 = Math.floor(Math.random() * crystalArray.length);
+var crystal4 = Math.floor(Math.random() * crystalArray.length);
 // functions //
 $('#Crystal1').on('click', function () {
-    currentValue = randomNumber + crystal1;
-    console.log("New Value=" + currentValue);
-    $('#Current').text(currentValue);
+        currentValue = randomNumber + crystal1;
+        console.log("New Value=" + currentValue);
+        $('#Current').html('Current Value:' + "" + currentValue);
     })
 
     $('#Crystal2').on('click', function () {
         currentValue = randomNumber + crystal2;
         console.log("New Value=" + currentValue);
-        $('#Current').text(currentValue);
-        })           
+    $('#Current').html('Current Value:' + "" + currentValue);
+    })           
         $('#Crystal3').on('click', function () {
             currentValue = randomNumber + crystal3;
             console.log("New Value=" + currentValue);
-            $('#Current').text(currentValue);
-            })
-            $('#Crystal4').on('click', function () {
-            currentValue = randomNumber + crystal4;
-            console.log("New Value=" + currentValue);
-            $('#Current').text(currentValue);
-        })
+        $('#Current').html('Current Value:' + "" + currentValue);
+    })
+        $('#Crystal4').on('click', function () {
+        currentValue = randomNumber + crystal4;
+        console.log("New Value=" + currentValue);
+        $('#Current').html('Current Value:' + "" + currentValue);
+    })
                 // Create function for reset game //
-                // add timeout to randomNumber // 
+                // add timeout method to randomNumber // 
                 // link to portfolio page //
 
                 // for loops not used //
@@ -51,13 +51,13 @@ $('#Crystal1').on('click', function () {
                 if (currentValue == randomNumber) {
                     $('#message').text('Winner! Perfect Match! You are a Genius!');
                     winCount++;
-                    $('#Wins').text(winCount);
+                    $('#Wins').text('Losses:' + '' + winCount);
                     console.log(wins)
                     // Resetgame //
-                } else if (currentValue > numberToGuess) {
+                } else if (currentValue > randomNumber) {
                     $('#message').text('Over Valuation! You Lose!');
                     lossCount++;
-                    $('#losses').text(lossCount);
+                    $('#losses').text('Losses:' + '' + lossCount);
                     console.log(lossCount)
                     // Resetgame //
                 } else {
@@ -72,7 +72,7 @@ $('#Crystal1').on('click', function () {
 
 
 
-//     This was my old starting point before starting over. 
+//     IGNORE This was my old starting point before starting over will delete after fixing bugs. 
 // {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" script type="text/Javascript">
 // // <script src= "assets/Javascript.js" script type="text/Javascript">
 //     $(document).ready(function)()
