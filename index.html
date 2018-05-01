@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystal Collector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css"> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" script type="text/Javascript">
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" script type="text/Javascript">
+    // <script src= "assets/Javascript.js" script type="text/Javascript">
     // Javascript here //
 // <!--Declare variables  -->
     var numberArray = [19,20,21,22,23,24,25,26,27,28];
@@ -61,90 +61,91 @@
     
 // // <!-- jquery -->
 </script>
+
     <body>
 </head>
 <header id="crystalheader">
     <Div class="container">
-<!-- add header content here use bootstrap grid one lardge column -->
-        <div class="row" div class="col-md-12">             
-            <p>Crystal Collector Game</p>
+        <!-- add header content here use bootstrap grid one lardge column -->
+        <div class="row" div class="col-md-12">
+            <h1>Crystal Collector Game</h1>
         </div>
 </header>
-        <Section class="container" id="insructions">
+<div class="container" id="insructions">
     <!-- paragraph below with instructions use grid -->
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+            <h2>Insructions:</h2>
+            <ol id="list">
+                <li>Try and match the secret crystal value!</li>
+                <li>Take a look at the random number</li>
+                <li>Click one of four Crystals below to add value (each crystal has a different hidden value)</li>
+                <li>If you match the secret value, YOU WIN!</li>
+                <li>If you go over the secret value, YOU LOSE!</li>
+            </ol>
+        </div>
+        <div class="col-md-3">
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+    <div class="container" id="results">
             <div class="row">
-                <div class="col-md-4">
-                    <p>&nbsp;</p>
-            </div>
-                <div class="col-md-4">
-                    <li Instructions:>
-                                Try and match the secret crystal value!
-                                Start with a Random value
-                                Click a Crystal to add value (each crystal has a different value
-                                If you match the secret value, YOU WIN!
-                                If you go over the secret value, YOU LOSE!                                       
-                    </li>
+                <div class="col-md-3" id="Start">
+                    <p>Random Number:</p>
                 </div>
-                    <div class="col-md-4">
-                    <p>&nbsp;</p>
+                <div class="col-md-3" id="Current">
+                    <p>Current value:</p>
                 </div>
-            </div>       
-        </Section>    
+                <div class="col-md-3" id="Wins">
+                    <p id="winCount">Wins:</p>
+                </div>
+                <div class="col-md-3" id="Losses">
+                    <p id="lossCount">Losses:</p>
+                </div>
+            </div>  
+        </div>
+</div>  
 <div class="container" id="cards">
     <!--Clickable images use boootstrap grid/cards/js logic  -->
-    <div class="row">
+    <div class="row" id=crystals>
         <div class="col-md-3" id="Crystal1">
-            <img src="assets/images/Crystal1.jpg" alt="Crystal1">
-                <button class="btn">Button</button>
+            <input type="image" src="assets/images/Crystal1.jpg" alt="Crystal1">
         </div>
         <div class="col-md-3" id="Crystal2">
-            <img src="assets/images/Crystal2.jpg" alt="Crystal2">
-                <button class="btn">Button</button> 
+            <input type="image" src="assets/images/Crystal2.jpg" alt="Crystal2">
+
         </div>
         <div class="col-md-3" id="Crystal3">
-            <img src="assets/images/crystal3.jpg" alt="Crystal3">
-                <button class="btn">Button</button>
+            <input type="image" src="assets/images/crystal3.jpg" alt="Crystal3">
         </div>
         <div class="col-md-3" id="Crystal4">
-            <img src="assets/images/Crystal4.jpg" alt="Crystal4">
-                <button class="btn">Button</button>
+            <input type="image" src="assets/images/Crystal4.jpg" alt="Crystal4">
         </div>
+    </div>
 </div>
-
-<div class="container" id="message">
-<!-- Display message use bootstrap grid one large column? -->
-     <!-- <h2>"Try and match the magic number!"</h2> -->
-    <!-- "Collect another Crystal!"
+    <div class="container" id="message">
+        <!-- Display message use bootstrap grid one large column? -->
+        <!-- <h2>"Try and match the magic number!"</h2> -->
+        <!-- "Collect another Crystal!"
     "Good Guess, but not a match!"
     "Over Valuation! You Lose!"
     "Winner!!! Perfect Match! You are a Genius"    
     -->
-    <div class="row" div class="col-md-12"> 
-        <h1>Perfect Match! You are a Genius</h1>
-    
+        <div class="row" div class="col-md-12">
+            <h1>Perfect Match! You are a Genius</h1>
+        </div>
     </div>
-</div>
-<div class="container" id="results">
-    <div class="row">
-        <div class="col-md-3">
-            <p"Random Number" id="start-number"></p>
-        </div>
-        <div class="col-md-3">
-                <p"Current Value" id="current-number"></p> 
-                </div>
-                <div class="col-md-3">
-                    <p"Wins:" id="winCount"></p>
-                </div>
-                <div class="col-md-3">
-                    <p"Losses:" id="lossCount"></p>
-                </div>
-        </div>
-    <!-- Footer use grid, 1 large column -->
-</body>
-<footer id="crystalheader" Div class="container">
-    <!-- add header content here use bootstrap grid one lardge column -->
-            <div class="row" div class="col-md-12">             
+    
+        <!-- Footer use grid, 1 large column -->
+        </body>
+        <footer id="crystalheader" Div class="container">
+            <!-- add header content here use bootstrap grid one lardge column -->
+            <div class="row" div class="col-md-12">
                 <p>Footer</p>
             </div>
-</footer>
+        </footer>
+
 </html>
