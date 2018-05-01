@@ -1,18 +1,33 @@
 
 header{
-    background-color: darkgrey;
-    height: 50px;
+    background-color: rgb(95, 39, 160);
+    font: bold;
+    height: 100px;
     font-size: 24px;
     border: black;
     border: 2px solid;
     padding: 10px;
     text-align: center;  
-    text-justify: auto;
-    margin-bottom: 15px;
+    text-justify: left;
+    margin-bottom: 5px;
 } 
-body{
-    background-color: khaki;
+
+#results{
+    background-color: lightgreen;
+    height: 50px;
+    font-size: 18px;
+    border: black;
+    border: 2px solid;
+    padding: 10px;
+    text-align: center;  
+    text-justify: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;  
 }
+#start{
+    float: left
+}
+
 #instructions{
     background-color: darkgrey;
     height: 50px;
@@ -22,13 +37,20 @@ body{
     border: 2px solid;
     padding: 20px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 } 
 
+#cards{
+    align-self: center;
+    width: 980px;
+    border: solid;
+    border: 2px;    
+}
 /* Crystals */
 #Crystal1{
     float: left;
-}
+    }
 #Crystal2{
     float: left;
 }
@@ -39,27 +61,29 @@ Crystal4{
     float: left;
 }
 #message{
-    background-color: lightskyblue ;
-    height: 50px;
-    width: 980px;
-    font-size: 12px;
+    background-color: lightskyblue;
+    float: center;
+    height: 75px;
+    font-size: 10px;
     border: black;
     border: 2px solid; 
     padding: 20px;
-    text-align: center;  
-    margin-bottom: 15px;  
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;  
 }
-#results{
-    background: green;
-}
-footer{
+#crystalfooter{
     background-color: darkgrey;
+    clear: both;
     height: 50px;
     font-size: 18px;
     border: black;
     border: 2px solid;
     padding: 10px;
     text-align: center;  
-    text-justify: auto;
-    margin-top: 25px  
+    text-justify: center;
+    margin-top: 15px  
+}
+body{
+    background-color: white;
 }
